@@ -1,1 +1,228 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Curso de Gerência de Configuração de Software</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --primary: #2563eb;
+      --secondary: #3b82f6;
+      --muted: #64748b;
+      --radius: 14px;
+      --maxw: 1000px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      position: sticky; top: 0; z-index: 50;
+    }
+    .nav {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+    }
+    .nav a {
+      text-decoration: none;
+      margin-left: 16px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .nav a:hover { color: var(--primary); }
 
+    /* HERO */
+    .hero {
+      max-width: var(--maxw);
+      margin: 40px auto;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 20px;
+    }
+    .hero h1 {
+      font-size: 34px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .btn {
+      background: var(--primary);
+      color: white;
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover { background: var(--secondary); }
+
+    .hero img {
+      width: 100%;
+      border-radius: var(--radius);
+    }
+
+    /* BENEFICIOS */
+    .section {
+      max-width: var(--maxw);
+      margin: 60px auto;
+      padding: 20px;
+    }
+    .section h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .benefits {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* MODULOS */
+    .modules {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top: 30px;
+    }
+    .module {
+      background: linear-gradient(135deg,#3b82f6,#2563eb);
+      color: white;
+      padding: 20px;
+      border-radius: var(--radius);
+    }
+    .module h3 { margin-bottom: 10px; font-size: 18px; }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      margin: 60px auto;
+      max-width: 600px;
+      padding: 40px 20px;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .cta h2 { margin-bottom: 16px; }
+    .cta p { color: var(--muted); margin-bottom: 20px; }
+
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero img { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div style="font-weight:800;font-size:18px;color:var(--primary)">Curso GCS</div>
+      <nav>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#inscricao">Inscrição</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Curso de Gerência de Configuração de Software</h1>
+      <p>Aprenda as práticas essenciais para controlar, versionar e gerenciar mudanças em projetos de software com eficiência e qualidade.</p>
+      <a href="#inscricao" class="btn">Inscreva-se agora</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=800&q=80" alt="Configuração de Software">
+  </section>
+
+  <section class="section" id="beneficios">
+    <h2>Por que fazer este curso?</h2>
+    <div class="benefits">
+      <div class="card">
+        <h3>Controle de Versões</h3>
+        <p>Domine ferramentas como Git para rastrear e gerenciar mudanças no código.</p>
+      </div>
+      <div class="card">
+        <h3>Automação</h3>
+        <p>Implemente pipelines de integração e entrega contínua.</p>
+      </div>
+      <div class="card">
+        <h3>Qualidade</h3>
+        <p>Garanta consistência e confiabilidade em projetos de software.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="modulos">
+    <h2>O que você vai aprender</h2>
+    <div class="modules">
+      <div class="module">
+        <h3>Módulo 1</h3>
+        <p>Introdução à Gerência de Configuração.</p>
+      </div>
+      <div class="module">
+        <h3>Módulo 2</h3>
+        <p>Controle de Versão com Git e GitHub.</p>
+      </div>
+      <div class="module">
+        <h3>Módulo 3</h3>
+        <p>Integração Contínua e Automação de Builds.</p>
+      </div>
+      <div class="module">
+        <h3>Módulo 4</h3>
+        <p>Entrega Contínua e Deploys Automatizados.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="inscricao">
+    <h2>Garanta sua vaga!</h2>
+    <p>Inscreva-se hoje e prepare-se para dominar a gerência de configuração de software.</p>
+    <a href="#" class="btn">Quero me inscrever</a>
+  </section>
+
+  <footer>
+    © 2025 Curso de Gerência de Configuração de Software • Todos os direitos reservados
+  </footer>
+</body>
+</html>
